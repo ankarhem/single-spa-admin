@@ -1,0 +1,34 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+
+  <div>
+    <style>
+      @import url('http://localhost:4173/bundle.css') print;
+    </style>
+    <application name="@norce/layout"></application>
+  </div>
+  <main>
+    <route default>
+      <!-- <application name="@single-spa/welcome"></application> -->
+      <route path="checkout">
+        <application name="@norce/checkout"></application>
+      </route>
+    </route>
+  </main>
+</single-spa-router>
